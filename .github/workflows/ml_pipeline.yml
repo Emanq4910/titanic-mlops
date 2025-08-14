@@ -25,7 +25,7 @@ jobs:
         run: python src/train.py
 
       - name: Upload model artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4   # CHANGED from v3 to v4
         with:
           name: model-artifacts
           path: artifacts/
@@ -48,7 +48,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Download model artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4   # CHANGED from v3 to v4
         with:
           name: model-artifacts
           path: artifacts/
@@ -57,7 +57,7 @@ jobs:
         run: python src/test.py
 
       - name: Upload metrics
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4   # CHANGED from v3 to v4
         with:
           name: model-metrics
           path: artifacts/metrics.txt
