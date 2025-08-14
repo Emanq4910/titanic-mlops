@@ -6,7 +6,7 @@ import joblib
 import os
 
 # Load dataset
-df = pd.read_csv("data/titanic.csv")
+df = pd.read_csv("data/Titanic-Dataset.csv")
 
 # Fill missing values
 df['Age'].fillna(df['Age'].median(), inplace=True)
